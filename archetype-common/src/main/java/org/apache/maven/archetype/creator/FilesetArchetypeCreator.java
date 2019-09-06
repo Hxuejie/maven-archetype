@@ -1719,7 +1719,14 @@ public class FilesetArchetypeCreator
 
         for ( String extension : extensions )
         {
-            includes.add( "**/*." + extension );
+            if ( StringUtils.isEmpty( extension ) )
+            {
+                includes.add( "**/*" );
+            }
+            else
+            {
+                includes.add( "**/*." + extension );
+            }
         }
 
         return createFileSet( excludes, false, filtered, group, includes, defaultEncoding );
