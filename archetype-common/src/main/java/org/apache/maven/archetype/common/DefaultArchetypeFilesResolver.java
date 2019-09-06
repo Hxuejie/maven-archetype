@@ -148,7 +148,7 @@ public class DefaultArchetypeFilesResolver
         }
 
         StringBuilder includes = new StringBuilder();
-        String[] languagesAsArray = StringUtils.split( languages );
+        String[] languagesAsArray = StringUtils.split( languages, "," );
         for ( int i = 0; i < languagesAsArray.length; i++ )
         {
             includes.append( levelDirectory ).append( languagesAsArray[i] );
