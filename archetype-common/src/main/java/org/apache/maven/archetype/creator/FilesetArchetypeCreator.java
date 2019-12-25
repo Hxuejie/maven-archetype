@@ -1721,11 +1721,25 @@ public class FilesetArchetypeCreator
         {
             if ( StringUtils.isEmpty( extension ) )
             {
-                includes.add( "**/*" );
+                if ( StringUtils.isEmpty( group ) ) 
+                {
+                    includes.add( "*" );
+                }
+                else 
+                {
+                    includes.add( "**/*" );
+                }
             }
             else
             {
-                includes.add( "**/*." + extension );
+                if ( StringUtils.isEmpty( group ) ) 
+                {
+                    includes.add( "*." + extension );
+                }
+                else 
+                {
+                    includes.add( "**/*." + extension );
+                }
             }
         }
 
