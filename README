@@ -5,3 +5,7 @@ Developers list: dev@maven.apache.org
 
 To deploy website
 sh ./deploySite.sh -Dusername=apacheuid -Dpassword=apachepaswword
+
+---
+
+fix: 二级目录下没有后缀名的文件会被忽略
